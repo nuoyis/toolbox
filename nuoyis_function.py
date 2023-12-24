@@ -65,6 +65,32 @@ def jiyukill():
     print("删除进程完毕")
     input("按 Enter 继续...")
 
+def web():
+    #网站工具箱
+    gongleng = ["本地ping", "网站测速", "页面截图下载", "打开网站"]
+    lem = 1
+    while lem <= len(gongleng):
+        print(str(lem)+"."+gongleng[lem-1])
+        lem = lem+1
+    usernum = int(input("请输入序号:"))
+    if usernum in [1, 2, 3]:
+        if usernum == 2:
+            print("该API由夏柔(https://api.aa1.cn)提供")
+            url = "https://ml.v.api.aa1.cn/ping.php"
+            params = {
+                "host": "blog.nuoyis.net"
+            }
+            response = impont.requests.get(url, params=params)
+            data = response.json()
+            print(data["msg"])
+            input(":")
+            print("获取到访问时间为"+data["time"]+",测速用的IP为:"+data["ip"])
+            input("按任意键继续:")
+    else:
+        print("没有想要的结果哦")
+
+
+
 def admin():
     try:
         return impont.ctypes.windll.shell32.IsUserAnAdmin()

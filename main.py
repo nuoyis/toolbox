@@ -17,7 +17,7 @@ if __name__ == "__main__":
         while (1):
             print("---欢迎使用诺依阁工具箱---\n")
             impont.os.system('cls')
-            gongleng = ["打开诺依阁的日记簿", "关于工作箱", "系统账号管理", "删除极域电子", "校园网登录", "动漫阅览", "退出工具箱"]
+            gongleng = ["打开诺依阁的日记簿", "关于工作箱", "系统账号管理", "删除极域电子", "校园网登录", "动漫阅览", "网站工具", "退出工具箱"]
             gong = len(gongleng)
             lem = 1
             while lem <= gong:
@@ -47,6 +47,8 @@ if __name__ == "__main__":
                     print("正在制作")
                 elif d == 6:
                     nuoyis_function.acg()
+                elif d == 7:
+                    nuoyis_function.web()
             else:
                 print("输入错误，请重新输入")
         impont.time.sleep(300)
