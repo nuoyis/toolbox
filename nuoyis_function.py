@@ -8,7 +8,7 @@ def systemuser():
         print(str(lem)+"."+gongleng[lem-1])
         lem = lem+1
     usernum = int(input("请输入序号:"))
-    if usernum in [1, 2, 3, 4]:
+    if usernum in numpy.arange(1, gongneng):
         if usernum == 1:
             systemuseradd()
         elif usernum == 2:
@@ -18,6 +18,22 @@ def systemuser():
         elif usernum == 4:
             impont.os.system("net user")
             input("按 Enter 继续...")
+        else:
+            input("按 Enter 继续...")
+    else:
+        print("输入不正确，请重新输入")
+def hexo_main():
+    gongleng = ["系统账号添加", "删除系统账户", "修改系统账户密码", "查看用户列表", "退出此功能"]
+    lem = 1
+    while lem <= len(gongleng):
+        print(str(lem) + "." + gongleng[lem - 1])
+        lem = lem + 1
+    usernum = int(input("请输入序号:"))
+    if usernum in numpy.arange(1, gongneng):
+        if usernum == 1:
+            hexo_picture()
+        elif usernum == 2:
+            typecho2hexo()
         else:
             input("按 Enter 继续...")
     else:

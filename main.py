@@ -9,7 +9,7 @@ import nuoyis_webdriver
 if __name__ == "__main__":
     if nuoyis_function.admin():
         # 设置窗口标题
-        impont.os.system("title 诺依阁的工具箱 网站:https://blog.nuoyis.net")
+        impont.os.system("title 诺依阁的工具箱 网站:https://blog.nuoyis.net Github地址:https://github.com/nuoyis/toolbox")
         impont.os.environ['PYTHONIOENCODING'] = 'GBK'
         a = b = c = 0
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
         while (1):
             print("---欢迎使用诺依阁工具箱---\n")
             impont.os.system('cls')
-            gongleng = ["打开诺依阁的日记簿", "关于工作箱", "系统账号管理", "删除极域电子", "校园网登录", "动漫阅览", "网站工具", "退出工具箱"]
+            gongleng = ["打开诺依阁的日记簿", "关于工作箱", "系统账号管理", "删除极域电子", "校园网登录", "动漫阅览", "网站工具", "Hexo专区", "按键专区", "退出工具箱"]
             gong = len(gongleng)
             lem = 1
             while lem <= gong:
@@ -49,6 +49,9 @@ if __name__ == "__main__":
                     nuoyis_function.acg()
                 elif d == 7:
                     nuoyis_function.web()
+                elif d == 8:
+
+                elif d == 9:
             else:
                 print("输入错误，请重新输入")
         impont.time.sleep(300)
